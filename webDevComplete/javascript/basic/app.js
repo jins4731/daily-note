@@ -23,3 +23,12 @@ alert(totalAdultYears);
 
 alert(hobbies[0]);
 alert(job.title);
+
+let person = {
+    name: 'Max',
+    greet() {
+        alert('Hello');
+    }
+}
+
+person.greet();
