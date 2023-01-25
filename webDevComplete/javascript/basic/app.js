@@ -27,8 +27,8 @@ alert(job.title);
 let person = {
     name: 'Max',
     greet() {
-        alert('Hello');
-    }
+        console.log('Hello');
+    } 
 }
 
 person.greet();
