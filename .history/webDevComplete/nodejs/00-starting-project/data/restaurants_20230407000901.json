@@ -1,0 +1,26 @@
+[
+    {
+        "id": "r1",
+        "name": "Test",
+        "address": "TestStreat 5",
+        "cuisine": "italian",
+        "website": "https://mytest.com",
+        "description": "it's awesome"
+    },
+    {
+        "id": "r2",
+        "name": "test2",
+        "address": "test2Stret. 5",
+        "cuisine": "indian",
+        "website": "https://indian.com",
+        "description": "amazing!"
+    },
+    {
+        "name": "test21",
+        "address": "testes21tstreet",
+        "cuisine": "italian",
+        "website": "https://www.udemy.com/course/100-2022-web-development/learn/lecture/30290492#overview",
+        "description": "af",
+        "id": "3336cb49-84b2-4fa0-ac08-f51a42517fb0"
+    }
+]
