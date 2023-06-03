@@ -1,6 +1,8 @@
-import { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { DiaryDispatchContext } from "./App";
 
-const DiaryItem = ({id, author, emotion, created_date, content, onRemove, onEdit}) => {
+const DiaryItem = ({id, author, emotion, created_date, content}) => {
+    const {onRemove, onEdit} = useContext(DiaryDispatchContext);
     const [isEdit, setIsEdit] = useState(false);
     const toggleIsEdit = () => {setIsEdit(!isEdit)};
 
@@ -61,4 +63,4 @@ const DiaryItem = ({id, author, emotion, created_date, content, onRemove, onEdit
     
 }
 
-export default DiaryItem;
+export default React.memo(DiaryItem);
