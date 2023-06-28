@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
   res.render('welcome');
 });
 
-router.get('/signup', function (req, res) {
+router.get('/signup', async function (req, res) {
   res.render('signup');
 });
 
@@ -16,7 +16,21 @@ router.get('/login', function (req, res) {
   res.render('login');
 });
 
-router.post('/signup', async function (req, res) {});
+router.post('/signup', async function (req, res) {
+  const userData = req.body;
+  const enteredEmail = userData.email;
+  const enteredConfrimEmail = userData['confirm-email'];
+  const enteredPassword = userData.password;
+
+  const user = {
+    email: enteredEmail,
+    password: enteredPassword
+  }
+
+  await db.getDb().collection('users').insertOne(user);
+
+  res.render('login');
+});
 
 router.post('/login', async function (req, res) {});
 
